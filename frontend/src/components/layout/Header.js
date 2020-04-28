@@ -23,15 +23,15 @@ export class Header extends Component {
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="/#/medidas">Unidades de Medida</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/#/">Leads</a>
-                </li>
+                </li>                             
+                               
                 
-                <li className="nav-item">
-                    <button onClick={this.props.logout } className="nav-link btn btn-info btn-sm text-light">Logout</button>
-                </li>                
-                <span className="navbar-text mr-3"><strong>{user ? `Welcome ${user.username}` : ""}</strong></span>
+            
+                <li className="nav-item">   
+                    <a className="nav-link"  onClick={this.props.logout } href="">Salir</a>
+                </li> 
+                <span className="navbar-text mr-3"><strong>{user ? `Usuario:  ${user.username}` : ""}</strong></span>
+            
             </ul>                        
         );
 
@@ -49,7 +49,7 @@ export class Header extends Component {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a className="navbar-brand" href="#">Lead Manager</a>                        
+                        <a className="navbar-brand" href="#">Store Warehouse</a>                        
                     </div>
                     {isAuthenticated ? authLinks : guestLinks}
                 </nav>

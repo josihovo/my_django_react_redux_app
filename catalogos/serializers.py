@@ -9,4 +9,4 @@ class GrupoSerializer(serializers.ModelSerializer):
 class MedidaSerializer (serializers.ModelSerializer):
     class Meta:
         model = Medida
-        fields = '__all_'
+        fields = '__all__'

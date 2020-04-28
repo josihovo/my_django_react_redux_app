@@ -5,10 +5,11 @@ from .serializers import GrupoSerializer, MedidaSerializer
 
 class GrupoViewSet (viewsets.ModelViewSet):
     queryset = Grupo.objects.all()
-    permissions_classes =  [ permissions.AllowAny]
+    permission_classes = [ permissions.IsAuthenticated ]
+
     serializer_class = GrupoSerializer
 
 class MedidaViewSet (viewsets.ModelViewSet):
     queryset = Medida.objects.all()
-    permission_classes = [ permissions.AllowAny]
+    permission_classes = [ permissions.IsAuthenticated ]
     serializer_class = MedidaSerializer 

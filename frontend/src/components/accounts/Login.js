@@ -67,7 +67,7 @@ export class Login extends Component {
                             </button>
                         </div>
                         <p>
-                            don't have an account?<Link to="/register">Login</Link>
+                            ¿No tienes cuenta?<Link to="/register">Registrate</Link>
                         </p>
                     </form>
                 </div>
