@@ -25,7 +25,7 @@ export const addGrupo = (grupo) => (dispatch, getState)=> {
                 payload: res.data
             })
 
-            dispatch (createMessage({addLead:'se ha agregado el grupo'}))
+            dispatch (createMessage({msg:'El grupo ' + grupo.nombre + ' se ha agregado satisfactoriamente.'}))
         })
         .catch( err => dispatch(returnErrors(err.response.data, err.response.status)));
 }
@@ -37,7 +37,7 @@ export const deleteGrupo =(id)=> (dispatch,getState)=>{
                 type: DELETE_GRUPO,
                 payload: id
             })
-            dispatch(createMessage({deleteLead:'Grupo eliminado'}))
+            dispatch(createMessage({msg:'El registro se ha eliminado'}))
         })
         .catch( err => dispatch(returnErrors(err.response.data, err.response.status)));
 }

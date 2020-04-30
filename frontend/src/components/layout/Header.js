@@ -15,22 +15,41 @@ export class Header extends Component {
     render() {
 
         const { isAuthenticated, user} = this.props.auth;
+
+
+
         const authLinks = (
             <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
 
-                <li className="nav-item">
-                    <a className="nav-link" href="/#/grupos">Grupos</a>
+               
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/#/medidas">Unidades de Medida</a>
-                </li>                             
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Catálogos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/#/departamentos">Departamentos</a>                    
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/#/grupos">Grupos</a>
+                    <a class="dropdown-item" href="/#/medidas">Medidas</a>
+                    </div>
+                </li>   
+
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span><strong>{user ? `Usuario:  ${user.username}` : ""}</strong></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" onClick={this.props.logout }>Salir</a>                    
+                    
+                    </div>
+                </li>                          
                                
                 
-            
-                <li className="nav-item">   
-                    <a className="nav-link"  onClick={this.props.logout } href="">Salir</a>
-                </li> 
-                <span className="navbar-text mr-3"><strong>{user ? `Usuario:  ${user.username}` : ""}</strong></span>
+           
             
             </ul>                        
         );

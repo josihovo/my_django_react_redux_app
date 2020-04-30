@@ -30,7 +30,7 @@ export const addMedida = (medida) => (dispatch, getState) => {
                 payload: res.data
             })
 
-            dispatch(createMessage({addLead:'medida Added'}));
+            dispatch(createMessage({msg:'La medida ' + medida.nombre + ' fue agregada satisfactoriamente'}));
         })
         .catch( err => dispatch(returnErrors(err.response.data, err.response.status)));
 }
@@ -44,7 +44,7 @@ export const deleteMedida = (id) => (dispatch, getState) => {
                 payload: id
             })     
             
-            dispatch(createMessage({deleteLead:'medida Deleted'}));
+            dispatch(createMessage({msg:'El registro ha sido eliminado'}));
         })
         .catch( err => dispatch(returnErrors(err.response.data, err.response.status)));
 
