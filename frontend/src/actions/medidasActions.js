@@ -4,6 +4,7 @@ import { tokenConfig} from './auth'
 
 export const GET_MEDIDAS = 'GET_MEDIDAS';
 export const ADD_MEDIDA = 'ADD_MEDIDA';
+export const EDIT_MEDIDA = 'EDIT_MEDIDA';
 export const DELETE_MEDIDA = 'DELETE_MEDIDA';
 
 //get medidas
@@ -35,6 +36,22 @@ export const addMedida = (medida) => (dispatch, getState) => {
         .catch( err => dispatch(returnErrors(err.response.data, err.response.status)));
 }
 
+
+//update medida 
+export const editMedida = (medida,id) => (dispatch, getState) => {
+    axios.put(`/api/medidas/${id}/`,medida, tokenConfig(getState))
+        .then ( res => {           
+
+                dispatch({
+                    type: EDIT_MEDIDA,
+                    payload: res.data
+                })
+
+                dispatch(createMessage({msg:'La medida ' + medida.nombre + ' fue actualizada satisfactoriamente'}));
+        }) 
+        .catch( err => dispatch(returnErrors(err.response.data, err.response.status)));
+
+}
 //delete medida
 export const deleteMedida = (id) => (dispatch, getState) => {
     axios.delete(`/api/medidas/${id}`, tokenConfig(getState))

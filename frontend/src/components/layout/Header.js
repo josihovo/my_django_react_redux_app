@@ -23,27 +23,27 @@ export class Header extends Component {
 
                
 
-                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                 <li className="nav-item">
+                    <a className="nav-link" href="#">Link</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Catálogos
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/#/departamentos">Departamentos</a>                    
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/#/grupos">Grupos</a>
-                    <a class="dropdown-item" href="/#/medidas">Medidas</a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a className="dropdown-item" href="/#/departamentos">Departamentos</a>                    
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="/#/grupos">Grupos</a>
+                    <a className="dropdown-item" href="/#/medidas">Medidas</a>
                     </div>
                 </li>   
 
-                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span><strong>{user ? `Usuario:  ${user.username}` : ""}</strong></span>
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" onClick={this.props.logout }>Salir</a>                    
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a className="dropdown-item" href="#" onClick={this.props.logout }>Salir</a>                    
                     
                     </div>
                 </li>                          
