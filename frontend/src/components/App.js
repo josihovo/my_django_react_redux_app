@@ -18,6 +18,7 @@ import { loadUser } from '../actions/auth'
 
 import Medidas from './medidas'
 import Grupos from './grupos'
+import Productos from './productos'
 import Departamentos from './departamentos/Dashboard'
 
 const alertOptions = {
@@ -46,6 +47,7 @@ class App extends Component{
 
                                     <PrivateRoute exact path="/medidas" component = {Medidas} />
                                     <PrivateRoute exact path="/grupos" component = {Grupos} />
+                                    <PrivateRoute exact path="/productos" component = {Productos} />
                                     <PrivateRoute exact path="/departamentos" component = {Departamentos} />
 
 

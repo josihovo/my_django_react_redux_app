@@ -6,7 +6,9 @@ import auth from './auth'
 
 import medidas from './medidasReducer'
 import grupos from './gruposReducer'
+import productos from './productosReducer'
 import departamentos from './departamentosReducer'
+
 
 export default combineReducers({
     auth,
@@ -15,5 +17,6 @@ export default combineReducers({
     
     medidas,
     grupos,
+    productos,
     departamentos,
 });

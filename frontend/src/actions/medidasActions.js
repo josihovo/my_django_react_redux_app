@@ -19,7 +19,6 @@ export const getMedidas = () => (dispatch, getState) =>{
         .catch( err => dispatch(returnErrors(err.response.data, err.response.status)));
 }
 
-
 //add medida
 export const addMedida = (medida) => (dispatch, getState) => {
     
@@ -35,7 +34,6 @@ export const addMedida = (medida) => (dispatch, getState) => {
         })
         .catch( err => dispatch(returnErrors(err.response.data, err.response.status)));
 }
-
 
 //update medida 
 export const editMedida = (medida,id) => (dispatch, getState) => {

@@ -34,6 +34,7 @@ export class Header extends Component {
                     <a className="dropdown-item" href="/#/departamentos">Departamentos</a>                    
                     <div className="dropdown-divider"></div>
                     <a className="dropdown-item" href="/#/grupos">Grupos</a>
+                    <a className="dropdown-item" href="/#/productos">Productos</a>    
                     <a className="dropdown-item" href="/#/medidas">Medidas</a>
                     </div>
                 </li>   

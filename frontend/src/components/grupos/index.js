@@ -2,11 +2,15 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { PropTypes } from 'prop-types'
 import { getGrupos, addGrupo, deleteGrupo } from '../../actions/gruposActions'
+import { getProductos } from '../../actions/productosActions'
+import { createMessage } from '../../actions/messages'
+
 
 class Grupos extends Component {
 
     static propTypes = {
-        grupos: PropTypes.array.isRequired
+        grupos: PropTypes.array.isRequired,
+        productos: PropTypes.array.isRequired
     }
 
     state = {
@@ -23,8 +27,23 @@ class Grupos extends Component {
         this.setState({clave:'', nombre:''});
     }
 
+    deleteItem = (item) => {
+         
+        const {createMessage, deleteGrupo } = this.props;
+        const productos = this.props.productos.filter (x => x.grupo.id == item.id)
+        
+        if (productos.length > 0){
+            createMessage({msg:'El grupo tiene productos registrados, no puede eliminarse'})
+            return;
+        }
+
+        deleteGrupo(item.id)
+
+    }
+
     componentDidMount(){
         this.props.getGrupos();
+        this.props.getProductos();
     }
 
     render() {
@@ -84,7 +103,7 @@ class Grupos extends Component {
                                     <td>{item.nombre}</td>
                                     <td>
                                         <button 
-                                            onClick={this.props.deleteGrupo.bind(this,item.id)}
+                                            onClick={this.deleteItem.bind(this,item)}
                                             className="btn btn-danger btn-sm"
                                         >
                                             Borrar
@@ -105,13 +124,16 @@ class Grupos extends Component {
 
 
 const mapState = state => ({
-    grupos: state.grupos.lista
+    grupos: state.grupos.lista,
+    productos :state.productos.lista
 })
 
 const mapDispatchs = {
     getGrupos,
     addGrupo, 
-    deleteGrupo
+    deleteGrupo,
+    createMessage,
+    getProductos
 }
 
 export default connect (mapState, mapDispatchs)(Grupos)
