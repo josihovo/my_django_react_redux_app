@@ -24,18 +24,20 @@ export class Header extends Component {
                
 
                  <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
+                 <a className="dropdown-item" href="/#/posts">Car Sales</a>
                 </li>
                 <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Catálogos
                     </a>
+                    
                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a className="dropdown-item" href="/#/departamentos">Departamentos</a>                    
                     <div className="dropdown-divider"></div>
                     <a className="dropdown-item" href="/#/grupos">Grupos</a>
                     <a className="dropdown-item" href="/#/productos">Productos</a>    
                     <a className="dropdown-item" href="/#/medidas">Medidas</a>
+                    
                     </div>
                 </li>   
 

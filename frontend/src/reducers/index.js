@@ -8,6 +8,7 @@ import medidas from './medidasReducer'
 import grupos from './gruposReducer'
 import productos from './productosReducer'
 import departamentos from './departamentosReducer'
+import posts from './postsReducer'
 
 
 export default combineReducers({
@@ -19,4 +20,6 @@ export default combineReducers({
     grupos,
     productos,
     departamentos,
+
+    posts,
 });

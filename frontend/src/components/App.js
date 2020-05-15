@@ -20,6 +20,7 @@ import Medidas from './medidas'
 import Grupos from './grupos'
 import Productos from './productos'
 import Departamentos from './departamentos/Dashboard'
+import Posts from './posts'
 
 const alertOptions = {
     timeout:3000,
@@ -49,6 +50,7 @@ class App extends Component{
                                     <PrivateRoute exact path="/grupos" component = {Grupos} />
                                     <PrivateRoute exact path="/productos" component = {Productos} />
                                     <PrivateRoute exact path="/departamentos" component = {Departamentos} />
+                                    <PrivateRoute exact path="/posts" component = {Posts} />
 
 
                                 </Switch>
