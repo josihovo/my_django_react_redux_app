@@ -268,7 +268,7 @@ class Posts extends Component {
                                             <p className="price">   { Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(item.precio)   }</p>
                                             <p>
                                                 Comentarios :  {item.comentarios}<br/> 
-                                                Publicado :  {(new Date(item.created_at)).toLocaleDateString('en-GB')}
+                                                Publicado :  {(new Date(item.created_at)).toLocaleDateString('es-MX')}
                                                                 
                                             </p>
                                             <p><button>

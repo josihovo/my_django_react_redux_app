@@ -36,5 +36,5 @@ class MedidaViewSet (viewsets.ModelViewSet):
 
 class DepartamentoViewSet (viewsets.ModelViewSet):
     queryset = Departamento.objects.all()
-    permission_classes = [ permissions.IsAuthenticated ]
+    permission_classes = [ permissions.IsAuthenticatedOrReadOnly  ]
     serializer_class = DepartamentoSerializer    
