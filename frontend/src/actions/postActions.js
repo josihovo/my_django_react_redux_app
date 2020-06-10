@@ -19,13 +19,13 @@ export const getPosts = () => (dispatch, getState) =>{
                 let urlA = item.imageA.split('/')
                 let urlB = item.imageB.split('/')
                 let urlC = item.imageC.split('/')
+                let urlD = item.imageA 
                  
 
                 let car = {
                     ...item
-                    , imageA: '/' + urlA[urlA.length - 4] + '/' + urlA[urlA.length - 3] + '/' + urlA[urlA.length - 2] + '/' + urlA[urlA.length - 1]
-                    , imageB: '/' + urlB[urlB.length - 4] + '/' + urlB[urlC.length - 3] + '/' + urlB[urlB.length - 2] + '/' + urlB[urlB.length - 1]
-                    , imageC: '/' + urlC[urlC.length - 4] + '/' + urlB[urlC.length - 3] + '/' + urlC[urlC.length - 2] + '/' + urlC[urlC.length - 1]
+                    , urlA
+                    , urlD
                 }
                 return car 
 

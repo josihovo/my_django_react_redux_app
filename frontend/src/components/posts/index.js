@@ -269,13 +269,18 @@ class Posts extends Component {
                                             <p>
                                                 Comentarios :  {item.comentarios}<br/> 
                                                 Publicado :  {(new Date(item.created_at)).toLocaleDateString('es-MX')}
-                                                                
+                                                  
+                                                <br/>
+                                                <span className="fa fa-trash-o fa-lg" aria-hidden="true" onClick={this.props.deletePost.bind(this, item.id)}></span>
+                                              
                                             </p>
                                             <p><button>
                                                 <span className="fa fa-phone fa-lg" aria-hidden="true">  {item.telefono}</span> 
                                                 <br />   
                                                 <span className="fa fa-location-arrow fa-lg" aria-hidden="true"> {item.ciudad}</span>
                                              </button></p>
+
+                                             
                                         </div>
                                     </div>                                                                                                
                                 ))}                    
