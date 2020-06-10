@@ -41,6 +41,13 @@ build/Release
 node_modules/
 jspm_packages/
 
+
+frontend/static/media/my_cms_images/
+db.sqlite3
+myvenv
+__pycache__
+
+
 # TypeScript v1 declaration files
 typings/
 
